@@ -1,0 +1,62 @@
+@mixin text($size, $lh, $weight: 400, $transform: none, $color: inherit) {
+    font-size: $size;
+    line-height: $lh;
+    font-weight: $weight;
+    text-transform: $transform;
+    color: $color;
+}
+
+@mixin flex($justify: center, $align: center, $direction: row, $wrap: nowrap, $gap: 0) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+@mixin position($type: absolute, $top: null, $right: null, $bottom: null, $left: null, $z-index: null) {
+    position: $type;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+}
+
+@mixin bg-img($url, $size: cover, $pos: center) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $pos;
+}
+
+@mixin img-fit($fit: cover, $pos: center) {
+    width: 100%;
+    height: 100%;
+    object-fit: $fit;
+    object-position: $pos;
+}
+
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@mixin container($max-width: 1200px, $padding-x: 15px) {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding-x;
+  padding-right: $padding-x;
+}
