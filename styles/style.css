@@ -287,17 +287,6 @@ body {
 }
 .features .card {
   place-items: center;
-  max-width: 370px;
-}
-@media (max-width: 1024px) {
-  .features .card {
-    max-width: 315px;
-  }
-}
-@media (max-width: 767px) {
-  .features .card {
-    max-width: 280px;
-  }
 }
 .features .card__wrapper-icon {
   display: grid;
@@ -416,6 +405,7 @@ body {
   background: rgba(255, 67, 67, 0.8);
   opacity: 0;
   transition: opacity 0.3s ease;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -494,17 +484,6 @@ body {
 .team__card {
   display: flex;
   flex-direction: column;
-  max-width: 270px;
-}
-@media (max-width: 1024px) {
-  .team__card {
-    max-width: 227px;
-  }
-}
-@media (max-width: 767px) {
-  .team__card {
-    max-width: 280px;
-  }
 }
 .team__wrapper-image {
   aspect-ratio: 1/1;

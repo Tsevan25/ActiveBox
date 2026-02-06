@@ -30,15 +30,6 @@
 
   &__card {
     @include m.flex($direction: column);
-    max-width: 270px;
-
-    @include m.tablet {
-      max-width: 227px;
-    }
-
-    @include m.mobile {
-      max-width: 280px;
-    }
   }
 
   &__wrapper-image {
@@ -138,8 +129,6 @@
             fill: v.$icon-hover; 
         }
     }
-      
-      
 
     @include m.tablet {
       width: 33px;
