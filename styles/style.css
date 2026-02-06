@@ -26,22 +26,6 @@ body {
   padding: 0 15px;
 }
 
-.title {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  text-transform: none;
-  color: inherit;
-}
-
-.text {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  text-transform: none;
-  color: inherit;
-}
-
 .hero {
   background-image: url(/assets/bg-img/bg.webp);
   background-position: center;
