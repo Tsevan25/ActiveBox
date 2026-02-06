@@ -1,0 +1,13 @@
+@use 'components/reset';
+@use 'components/vars';
+@use 'components/mixins';
+@use 'components/keyframes';
+@use 'components/global';
+
+@use 'sections/hero';
+@use 'sections/features';
+@use 'sections/works';
+@use 'sections/team';
+@use 'sections/testimonials';
+@use 'sections/download';
+@use 'sections/footer';

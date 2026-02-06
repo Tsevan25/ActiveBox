@@ -1,0 +1,172 @@
+@use "../components/vars" as v;
+@use "../components/mixins" as m;
+
+.footer {
+  color: v.$text-inverse;
+  text-align: center;
+
+  &__top {
+    padding: 71px 0 67px;
+    background-color: v.$bg-footer-top;
+
+    @include m.tablet {
+      padding: 46px 0 41px;
+    }
+
+    @include m.mobile {
+      padding: 34px 0 38px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include m.tablet {
+      gap: 20px;
+    }
+
+    @include m.mobile {
+      grid-template-columns: 1fr;
+      gap: 64px;
+    }
+  }
+
+  &__column {
+    &:nth-child(1) {
+      @include m.flex($gap: 29px, $direction: column);
+
+      @include m.tablet {
+        gap: 18px;
+      }
+
+      @include m.mobile {
+        gap: 34px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include m.flex($gap: 49px, $direction: column);
+
+      @include m.tablet {
+        gap: 33px;
+      }
+
+      @include m.mobile {
+        gap: 37px;
+      }
+    }
+
+    &:nth-child(3) {
+      @include m.flex($gap: 29px, $direction: column);
+
+      @include m.tablet {
+        gap: 18px;
+      }
+
+      @include m.mobile {
+        gap: 34px;
+      }
+    }
+  }
+
+  &__heading {
+    @include m.font(18px, 21px, 700, uppercase);
+
+    @include m.tablet {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__text {
+    @include m.font(18px, 21px, 400, capitalize);
+    text-align: center;
+
+    @include m.tablet {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__icons {
+    @include m.flex(center, center, $gap: 27px);
+
+    @include m.tablet {
+      gap: 23px;
+    }
+
+    @include m.mobile {
+      gap: 16px;
+    }
+  }
+
+  &__icon-link {
+    width: 39px;
+    height: 39px;
+    border: 1px solid v.$border-light;
+    @include m.flex(center, center);
+    transition: border-color 0.3s ease;
+
+    svg path {
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      border-color: v.$border-hover;
+    }
+
+    &:active {
+      border-color: v.$border-hover;
+
+      svg path {
+        fill: v.$icon-hover;
+      }
+    }
+
+    @include m.tablet {
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  &__bottom {
+    padding: 24px 0;
+    background-color: v.$bg-footer-bottom;
+
+    @include m.tablet {
+      padding: 14px 0;
+    }
+
+    @include m.mobile {
+      padding: 30px 0 28px;
+    }
+  }
+
+  &__copyright {
+    max-width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    @include m.font(
+      18px,
+      21px,
+      $transform: capitalize,
+      $color: v.$text-copyright
+    );
+
+    @include m.tablet {
+      max-width: 314px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include m.mobile {
+      max-width: 280px;
+    }
+
+    &--white {
+      color: v.$text-inverse;
+    }
+  }
+}

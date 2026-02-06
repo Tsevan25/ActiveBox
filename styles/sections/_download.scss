@@ -1,0 +1,83 @@
+@use "../components/vars" as v;
+@use "../components/mixins" as m;
+
+.download {
+  padding: 132px 0 114px;
+  text-align: center;
+  color: v.$text-download-primary;
+
+  @include m.tablet {
+    padding: 94px 0 78px;
+  }
+
+  @include m.mobile {
+    padding: 65px 0 45px;
+  }
+
+  &__title {
+    @include m.font(30px, 35px, 500, capitalize);
+    margin-bottom: 22px;
+
+    @include m.tablet {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 21px;
+    }
+
+    @include m.mobile {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__text {
+    @include m.font(18px, 21px, 700, uppercase);
+    margin-bottom: 50px;
+
+    @include m.tablet {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 46px;
+    }
+
+    @include m.mobile {
+      font-size: 13px;
+      line-height: 15px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__button {
+    min-width: 369px;
+    max-width: 100%;
+    padding: 25px;
+    text-align: center;
+    background-color: v.$btn-primary-bg;
+    border: none;
+    cursor: pointer;
+    @include m.font(24px, 28px, 900, uppercase, v.$text-inverse);
+    transition: color 0.9s ease-in;
+
+    &:hover {
+      background-color: v.$btn-primary-hover;
+    }
+
+    &:active {
+      background-color: v.$btn-primary-active;
+      box-shadow: 4px 4px 30px #ff4343;
+    }
+
+    @include m.tablet {
+      min-width: 314px;
+      padding: 28px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @include m.mobile {
+      min-width: 280px;
+      padding: 28px;
+    }
+  }
+}

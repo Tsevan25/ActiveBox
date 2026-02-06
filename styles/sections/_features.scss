@@ -1,0 +1,94 @@
+@use '../components/vars' as v;
+@use '../components/mixins' as m;
+
+
+.features {
+  padding: 109px 0 116px;
+
+  @include m.tablet {
+    padding: 78px 0 80px;
+  }
+
+  @include m.mobile {
+    padding: 40px 0 35px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 89px 31px;
+    justify-items: center;
+
+    @include m.tablet {
+      gap: 50px 20px;
+    }
+
+    @include m.mobile {
+      grid-template-columns: 1fr;
+      gap: 42px;
+    }
+  }
+
+  .card {
+    place-items: center;
+    max-width: 370px;
+
+    @include m.tablet {
+      max-width: 315px;
+    }
+
+    @include m.mobile {
+      max-width: 280px;
+    }
+
+    &__wrapper-icon {
+      display: grid;
+      place-items: center;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 51px;
+
+      @include m.tablet {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 43px;
+      }
+
+      @include m.mobile {
+        width: 76px;
+        height: 76px;
+        margin-bottom: 37px;
+      }
+    }
+
+    &__icon {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &__title {
+      @include m.font(24px, 28px, 900, uppercase, v.$text-primary);
+      margin-bottom: 42px;
+
+      @include m.tablet {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 24px;
+      }
+
+      @include m.mobile {
+        margin-bottom: 9px;
+      }
+    }
+
+    &__text {
+      @include m.font(18px, 21px, 400, $color: v.$text-secondary);
+      text-align: center;
+
+      @include m.tablet {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}

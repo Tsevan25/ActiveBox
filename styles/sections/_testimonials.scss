@@ -1,0 +1,92 @@
+@use '../components/vars' as v;
+@use '../components/mixins' as m;
+
+
+.testimonials {
+  position: relative;
+  color: v.$text-inverse;
+  background-color: v.$bg-testimonials;
+
+  &__content {
+    @include m.flex($gap: 31px);
+    align-items: stretch;
+
+    @include m.tablet {
+      gap: 19px;
+    }
+
+    @include m.mobile {
+      @include m.flex($gap: 25px, $direction: column);
+    }
+  }
+
+  &__wrapper-image {
+    flex: 0 1 570px;
+    aspect-ratio: 570 / 490;
+    overflow: hidden;
+
+    @include m.tablet {
+      flex: 0 1 482px;
+      aspect-ratio: 482 / 332;
+    }
+
+    @include m.mobile {
+      flex: 0 1 280px;
+      aspect-ratio: 280 / 218;
+    }
+  }
+
+  &__image {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__info {
+    flex: 0 1 570px;
+    height: 100%;
+    padding: 116px 0;
+    @include m.flex(center, $gap: 20px, $direction: column);
+
+    @include m.tablet {
+      flex: 0 1 482px;
+      gap: 8px;
+      padding: 110px 0 103px;
+    }
+
+    @include m.mobile {
+      flex: 0 1 auto;
+      gap: 15px;
+      padding: 0 0 95px;
+    }
+  }
+
+  &__quote {
+    font-family: 'Cardo', serif;
+    font-style: italic;
+    @include m.font(36px, 49px, $transform: capitalize);
+
+    @include m.tablet {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @include m.mobile {
+      text-align: center;
+    }
+  }
+
+  &__author {
+    @include m.font(13px, 15px, 700, uppercase);
+
+    @include m.tablet {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    @include m.mobile {
+      text-align: center;
+    }
+  }
+}
