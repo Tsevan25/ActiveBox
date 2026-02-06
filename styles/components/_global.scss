@@ -12,11 +12,3 @@ body {
     padding: 0 15px;
 }
 
-.title {
-    @include m.font(18px, 21px);
-}
-
-.text {
-    @include m.font(18px, 21px, 400);
-    
-}

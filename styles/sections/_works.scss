@@ -8,6 +8,7 @@
   max-width: 1510px;
   margin: 0 auto;
 
+
   @include m.mobile {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -58,6 +59,7 @@
     background: rgba(v.$bg-overlay, 0.8);
     opacity: 0;
     transition: opacity 0.3s ease;
+    padding: 10px;
     @include m.flex(center, center, 37px, column);
 
     @include m.tablet {
