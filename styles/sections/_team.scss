@@ -28,10 +28,6 @@
     }
   }
 
-  &__card {
-    @include m.flex($direction: column);
-  }
-
   &__wrapper-image {
     aspect-ratio: 1 / 1;
     overflow: hidden;
@@ -46,7 +42,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: fill 0.3s ease;
   }
 
   &__name {

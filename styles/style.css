@@ -119,14 +119,16 @@ body {
   text-align: center;
   border: none;
   cursor: pointer;
-  transition: color 0.9s linear;
+  transition: background-color 0.8s ease-out, box-shadow 0.8s ease-out;
 }
 .hero__button:hover {
   background-color: #e71414;
+  transition: background-color 0.2s ease;
 }
 .hero__button:active {
   background-color: #ff4343;
   box-shadow: 4px 4px 30px #ff4343;
+  transition: 0s;
 }
 @media (max-width: 1024px) {
   .hero__button {
@@ -465,10 +467,6 @@ body {
     gap: 56px;
   }
 }
-.team__card {
-  display: flex;
-  flex-direction: column;
-}
 .team__wrapper-image {
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -484,7 +482,6 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: fill 0.3s ease;
 }
 .team__name {
   font-size: 24px;
@@ -775,14 +772,16 @@ body {
   font-weight: 900;
   text-transform: uppercase;
   color: #ffffff;
-  transition: color 0.9s ease-in;
+  transition: background-color 0.8s ease-out, box-shadow 0.8s ease-out;
 }
 .download__button:hover {
   background-color: #e71414;
+  transition: background-color 0.2s ease;
 }
 .download__button:active {
   background-color: #ff4343;
   box-shadow: 4px 4px 30px #ff4343;
+  transition: 0s;
 }
 @media (max-width: 1024px) {
   .download__button {
