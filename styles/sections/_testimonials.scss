@@ -5,11 +5,50 @@
 .testimonials {
   position: relative;
   color: v.$text-inverse;
-  background-color: v.$bg-testimonials;
+
+
+&__swiper {
+  padding: 0 0 45px;
+
+    @include m.tablet {
+      padding: 0 0 33px;
+    }
+
+  .swiper-pagination{
+    bottom: 0;
+    @include m.flex(center, $gap: 25px);
+
+     @include m.mobile {
+    gap: 20px;
+    }
+    
+  }
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #7e5d6f;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0;
+    opacity: 1;
+
+    @include m.tablet {
+    width: 9px;
+    height: 9px;
+    }
+
+
+    &-active {
+      background-color: #7e5d6f;
+    }
+  }
+}
 
   &__content {
     @include m.flex($gap: 31px);
     align-items: stretch;
+    background-color: v.$bg-testimonials;
+    padding: 0 15px;
 
     @include m.tablet {
       gap: 19px;

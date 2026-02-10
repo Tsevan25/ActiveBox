@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="styles/style.css" />
     <title>ActiveBox</title>
   </head>
@@ -653,8 +657,10 @@
 
 
     <div class="testimonials" id="testimonials-section">
-      <div class="container">
-        <div class="testimonials__content">
+      <div class="swiper testimonials__swiper container">
+          <div class="swiper-wrapper">
+
+        <div class="swiper-slide testimonials__content">
           <div class="testimonials__wrapper-image">
             <img
               class="testimonials__image"
@@ -672,6 +678,88 @@
             </p>
           </div>
         </div>
+     
+        <div class="swiper-slide testimonials__content">
+          <div class="testimonials__wrapper-image">
+            <img
+              class="testimonials__image"
+              src="assets/testimonials-img/testimonials-bg.png"
+              alt="testimonial_image"
+            />
+          </div>
+          <div class="testimonials__info">
+            <p class="testimonials__quote">
+              “Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Donec sed odio dui. Aenean eu leo quam...”
+            </p>
+            <p class="testimonials__author">
+              Susan Sims, Interaction Designer at XYZ
+            </p>
+          </div>
+        </div>
+
+        
+        <div class="swiper-slide testimonials__content">
+          <div class="testimonials__wrapper-image">
+            <img
+              class="testimonials__image"
+              src="assets/testimonials-img/testimonials-bg.png"
+              alt="testimonial_image"
+            />
+          </div>
+          <div class="testimonials__info">
+            <p class="testimonials__quote">
+              “Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Donec sed odio dui. Aenean eu leo quam...”
+            </p>
+            <p class="testimonials__author">
+              Susan Sims, Interaction Designer at XYZ
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide testimonials__content">
+          <div class="testimonials__wrapper-image">
+            <img
+              class="testimonials__image"
+              src="assets/testimonials-img/testimonials-bg.png"
+              alt="testimonial_image"
+            />
+          </div>
+          <div class="testimonials__info">
+            <p class="testimonials__quote">
+              “Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Donec sed odio dui. Aenean eu leo quam...”
+            </p>
+            <p class="testimonials__author">
+              Susan Sims, Interaction Designer at XYZ
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide testimonials__content">
+          <div class="testimonials__wrapper-image">
+            <img
+              class="testimonials__image"
+              src="assets/testimonials-img/testimonials-bg.png"
+              alt="testimonial_image"
+            />
+          </div>
+          <div class="testimonials__info">
+            <p class="testimonials__quote">
+              “Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Donec sed odio dui. Aenean eu leo quam...”
+            </p>
+            <p class="testimonials__author">
+              Susan Sims, Interaction Designer at XYZ
+            </p>
+          </div>
+        </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+       
       </div>
     </div>
 
@@ -773,6 +861,15 @@
       </div>
     </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.testimonials__swiper', {
+  loop: false, 
+  pagination: {
+    el: '.swiper-pagination',
+     clickable: true,
+  },
+});
+</script>
   </body>
 </html>
