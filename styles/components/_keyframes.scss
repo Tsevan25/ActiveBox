@@ -1,11 +1,13 @@
-@keyframes pulse-logo {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+@keyframes float {
+  0%,
   100% {
-    transform: scale(1);
+    transform: translateY(0) rotate(0);
+  }
+  33% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+  66% {
+    transform: translateY(-2px) rotate(2deg);
   }
 }
+

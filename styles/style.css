@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 
-@keyframes pulse-logo {
-  0% {
-    transform: scale(1);
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
   }
-  50% {
-    transform: scale(1.1);
+  33% {
+    transform: translateY(-5px) rotate(-2deg);
   }
-  100% {
-    transform: scale(1);
+  66% {
+    transform: translateY(-2px) rotate(2deg);
   }
 }
 body {
@@ -185,8 +185,7 @@ body {
 .header__logo {
   width: 100%;
   height: 100%;
-  transition: transform 0.3s ease;
-  animation: pulse-logo 1.5s infinite;
+  animation: float 4s ease-in-out infinite;
 }
 .header__nav-list {
   display: flex;
