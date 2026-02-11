@@ -57,15 +57,17 @@
     border: none;
     cursor: pointer;
     @include m.font(24px, 28px, 900, uppercase, v.$text-inverse);
-    transition: color 0.9s ease-in;
+   transition: background-color 0.8s ease-out, box-shadow 0.8s ease-out;
 
     &:hover {
       background-color: v.$btn-primary-hover;
+      transition: background-color 0.2s ease; 
     }
 
     &:active {
       background-color: v.$btn-primary-active;
       box-shadow: 4px 4px 30px #ff4343;
+      transition: 0s;
     }
 
     @include m.tablet {

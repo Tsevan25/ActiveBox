@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 
-@keyframes pulse-logo {
-  0% {
-    transform: scale(1);
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
   }
-  50% {
-    transform: scale(1.1);
+  33% {
+    transform: translateY(-5px) rotate(-2deg);
   }
-  100% {
-    transform: scale(1);
+  66% {
+    transform: translateY(-2px) rotate(2deg);
   }
 }
 body {
@@ -24,22 +24,6 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.title {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  text-transform: none;
-  color: inherit;
-}
-
-.text {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  text-transform: none;
-  color: inherit;
 }
 
 .hero {
@@ -135,14 +119,16 @@ body {
   text-align: center;
   border: none;
   cursor: pointer;
-  transition: color 0.9s linear;
+  transition: background-color 0.8s ease-out, box-shadow 0.8s ease-out;
 }
 .hero__button:hover {
   background-color: #e71414;
+  transition: background-color 0.2s ease;
 }
 .hero__button:active {
   background-color: #ff4343;
   box-shadow: 4px 4px 30px #ff4343;
+  transition: 0s;
 }
 @media (max-width: 1024px) {
   .hero__button {
@@ -199,8 +185,7 @@ body {
 .header__logo {
   width: 100%;
   height: 100%;
-  transition: transform 0.3s ease;
-  animation: pulse-logo 1.5s infinite;
+  animation: float 4s ease-in-out infinite;
 }
 .header__nav-list {
   display: flex;
@@ -287,17 +272,6 @@ body {
 }
 .features .card {
   place-items: center;
-  max-width: 370px;
-}
-@media (max-width: 1024px) {
-  .features .card {
-    max-width: 315px;
-  }
-}
-@media (max-width: 767px) {
-  .features .card {
-    max-width: 280px;
-  }
 }
 .features .card__wrapper-icon {
   display: grid;
@@ -416,6 +390,7 @@ body {
   background: rgba(255, 67, 67, 0.8);
   opacity: 0;
   transition: opacity 0.3s ease;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -491,21 +466,6 @@ body {
     gap: 56px;
   }
 }
-.team__card {
-  display: flex;
-  flex-direction: column;
-  max-width: 270px;
-}
-@media (max-width: 1024px) {
-  .team__card {
-    max-width: 227px;
-  }
-}
-@media (max-width: 767px) {
-  .team__card {
-    max-width: 280px;
-  }
-}
 .team__wrapper-image {
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -521,7 +481,6 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: fill 0.3s ease;
 }
 .team__name {
   font-size: 24px;
@@ -635,12 +594,50 @@ body {
 .testimonials {
   position: relative;
   color: #ffffff;
-  background-color: #5c3249;
+}
+.testimonials__swiper {
+  padding: 0 0 45px;
+}
+@media (max-width: 1024px) {
+  .testimonials__swiper {
+    padding: 0 0 33px;
+  }
+}
+.testimonials__swiper .swiper-pagination {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+@media (max-width: 767px) {
+  .testimonials__swiper .swiper-pagination {
+    gap: 20px;
+  }
+}
+.testimonials__swiper .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #7e5d6f;
+  border-radius: 50%;
+  background-color: transparent;
+  margin: 0;
+  opacity: 1;
+}
+@media (max-width: 1024px) {
+  .testimonials__swiper .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+  }
+}
+.testimonials__swiper .swiper-pagination-bullet-active {
+  background-color: #7e5d6f;
 }
 .testimonials__content {
   display: flex;
   gap: 31px;
   align-items: stretch;
+  background-color: #5c3249;
+  padding: 0 15px;
 }
 @media (max-width: 1024px) {
   .testimonials__content {
@@ -812,14 +809,16 @@ body {
   font-weight: 900;
   text-transform: uppercase;
   color: #ffffff;
-  transition: color 0.9s ease-in;
+  transition: background-color 0.8s ease-out, box-shadow 0.8s ease-out;
 }
 .download__button:hover {
   background-color: #e71414;
+  transition: background-color 0.2s ease;
 }
 .download__button:active {
   background-color: #ff4343;
   box-shadow: 4px 4px 30px #ff4343;
+  transition: 0s;
 }
 @media (max-width: 1024px) {
   .download__button {

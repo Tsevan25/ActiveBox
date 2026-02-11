@@ -28,19 +28,6 @@
     }
   }
 
-  &__card {
-    @include m.flex($direction: column);
-    max-width: 270px;
-
-    @include m.tablet {
-      max-width: 227px;
-    }
-
-    @include m.mobile {
-      max-width: 280px;
-    }
-  }
-
   &__wrapper-image {
     aspect-ratio: 1 / 1;
     overflow: hidden;
@@ -55,7 +42,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: fill 0.3s ease;
   }
 
   &__name {
@@ -138,8 +124,6 @@
             fill: v.$icon-hover; 
         }
     }
-      
-      
 
     @include m.tablet {
       width: 33px;

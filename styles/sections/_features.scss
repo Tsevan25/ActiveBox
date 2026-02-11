@@ -31,15 +31,6 @@
 
   .card {
     place-items: center;
-    max-width: 370px;
-
-    @include m.tablet {
-      max-width: 315px;
-    }
-
-    @include m.mobile {
-      max-width: 280px;
-    }
 
     &__wrapper-icon {
       display: grid;
